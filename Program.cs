@@ -4,11 +4,38 @@ class Program
 {
     static void Main()
     {
+        MostrarMenu();
+
+        Console.Write("Seleccione una opción: ");
+        string opcion = Console.ReadLine()!;
+
+        if (opcion == "1")
+        {
+            RegistrarSolicitud();
+        }
+        else if (opcion == "2")
+        {
+            Console.WriteLine("Programa finalizado.");
+        }
+        else
+        {
+            Console.WriteLine("Opción no válida.");
+        }
+    }
+
+    // Requerimiento 4: función sin retorno para mostrar el menú
+    static void MostrarMenu()
+    {
         Console.WriteLine("========================================");
         Console.WriteLine("        SOPORTE ACADÉMICO");
-        Console.WriteLine("   Registro de solicitudes");
         Console.WriteLine("========================================");
+        Console.WriteLine("1. Registrar solicitud");
+        Console.WriteLine("2. Salir");
+        Console.WriteLine("========================================");
+    }
 
+    static void RegistrarSolicitud()
+    {
         Console.Write("Código del estudiante: ");
         string codigo = Console.ReadLine()!;
 
