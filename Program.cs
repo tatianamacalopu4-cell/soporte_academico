@@ -22,8 +22,16 @@ class Program
         Console.Write("Nombre del estudiante: ");
         string nombre = Console.ReadLine()!;
 
-        Console.Write("Tipo de consulta: ");
+        Console.Write("Tipo de consulta (matricula, pagos, constancia, plataforma, otro): ");
         string tipoConsulta = Console.ReadLine()!;
+
+        while (!ValidarTipoConsulta(tipoConsulta))
+        {
+            Console.WriteLine("Tipo de consulta inválido.");
+            Console.WriteLine("Opciones: matricula, pagos, constancia, plataforma u otro.");
+            Console.Write("Ingrese nuevamente el tipo de consulta: ");
+            tipoConsulta = Console.ReadLine()!;
+        }
 
         Console.Write("Descripción de la solicitud: ");
         string descripcion = Console.ReadLine()!;
@@ -36,9 +44,21 @@ class Program
         Console.WriteLine($"Descripción: {descripcion}");
     }
 
-    // Requerimiento 2: valida el código del estudiante
+    // Requerimiento 2
     static bool ValidarCodigo(string codigo)
     {
         return !string.IsNullOrWhiteSpace(codigo) && codigo.Length >= 6;
+    }
+
+    // Requerimiento 3
+    static bool ValidarTipoConsulta(string tipoConsulta)
+    {
+        tipoConsulta = tipoConsulta.ToLower();
+
+        return tipoConsulta == "matricula" ||
+               tipoConsulta == "pagos" ||
+               tipoConsulta == "constancia" ||
+               tipoConsulta == "plataforma" ||
+               tipoConsulta == "otro";
     }
 }
