@@ -36,6 +36,7 @@ class Program
 
     static void RegistrarSolicitud()
     {
+        // Requerimiento 2: validar código
         Console.Write("Código del estudiante: ");
         string codigo = Console.ReadLine()!;
 
@@ -46,9 +47,18 @@ class Program
             codigo = Console.ReadLine()!;
         }
 
+        // Requerimiento 6: validar nombre
         Console.Write("Nombre del estudiante: ");
         string nombre = Console.ReadLine()!;
 
+        while (!ValidarTexto(nombre))
+        {
+            Console.WriteLine("El nombre no puede estar vacío.");
+            Console.Write("Ingrese nuevamente el nombre: ");
+            nombre = Console.ReadLine()!;
+        }
+
+        // Requerimiento 3: validar tipo de consulta
         Console.Write("Tipo de consulta (matricula, pagos, constancia, plataforma, otro): ");
         string tipoConsulta = Console.ReadLine()!;
 
@@ -60,12 +70,21 @@ class Program
             tipoConsulta = Console.ReadLine()!;
         }
 
+        // Requerimiento 6: validar descripción
         Console.Write("Descripción de la solicitud: ");
         string descripcion = Console.ReadLine()!;
+
+        while (!ValidarTexto(descripcion))
+        {
+            Console.WriteLine("La descripción no puede estar vacía.");
+            Console.Write("Ingrese nuevamente la descripción: ");
+            descripcion = Console.ReadLine()!;
+        }
 
         // Requerimiento 5: calcular prioridad
         string prioridad = CalcularPrioridad(tipoConsulta);
 
+        // Mostrar solicitud
         Console.WriteLine();
         Console.WriteLine("Solicitud registrada.");
         Console.WriteLine($"Código: {codigo}");
@@ -93,7 +112,7 @@ class Program
                tipoConsulta == "otro";
     }
 
-    // Requerimiento 5: función con retorno para calcular prioridad
+    // Requerimiento 5
     static string CalcularPrioridad(string tipoConsulta)
     {
         tipoConsulta = tipoConsulta.ToLower();
@@ -110,5 +129,11 @@ class Program
         {
             return "Baja";
         }
+    }
+
+    // Requerimiento 6
+    static bool ValidarTexto(string texto)
+    {
+        return !string.IsNullOrWhiteSpace(texto);
     }
 }
