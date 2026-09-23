@@ -11,7 +11,15 @@ class Program
 
         if (opcion == "1")
         {
-            RegistrarSolicitud();
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"===== REGISTRO DE SOLICITUD {i} =====");
+                RegistrarSolicitud();
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Se registraron las 3 solicitudes correctamente.");
         }
         else if (opcion == "2")
         {
@@ -29,14 +37,15 @@ class Program
         Console.WriteLine("========================================");
         Console.WriteLine("        SOPORTE ACADÉMICO");
         Console.WriteLine("========================================");
-        Console.WriteLine("1. Registrar solicitud");
+        Console.WriteLine("1. Registrar solicitudes");
         Console.WriteLine("2. Salir");
         Console.WriteLine("========================================");
     }
 
+    // Requerimiento 10: permite registrar varias solicitudes
     static void RegistrarSolicitud()
     {
-        // Requerimiento 2: validar código
+        // Requerimiento 2
         Console.Write("Código del estudiante: ");
         string codigo = Console.ReadLine()!;
 
@@ -47,7 +56,7 @@ class Program
             codigo = Console.ReadLine()!;
         }
 
-        // Requerimiento 6: validar nombre
+        // Requerimiento 6
         Console.Write("Nombre del estudiante: ");
         string nombre = Console.ReadLine()!;
 
@@ -58,7 +67,7 @@ class Program
             nombre = Console.ReadLine()!;
         }
 
-        // Requerimiento 3: validar tipo de consulta
+        // Requerimiento 3
         Console.Write("Tipo de consulta (matricula, pagos, constancia, plataforma, otro): ");
         string tipoConsulta = Console.ReadLine()!;
 
@@ -70,7 +79,7 @@ class Program
             tipoConsulta = Console.ReadLine()!;
         }
 
-        // Requerimiento 6: validar descripción
+        // Requerimiento 6
         Console.Write("Descripción de la solicitud: ");
         string descripcion = Console.ReadLine()!;
 
@@ -81,10 +90,10 @@ class Program
             descripcion = Console.ReadLine()!;
         }
 
-        // Requerimiento 5: calcular prioridad
+        // Requerimiento 5
         string prioridad = CalcularPrioridad(tipoConsulta);
 
-        // Requerimiento 7: mostrar resumen
+        // Requerimiento 7 y 8
         MostrarResumen(codigo, nombre, tipoConsulta, descripcion, prioridad);
     }
 
@@ -125,13 +134,13 @@ class Program
         }
     }
 
-    // // Requerimiento 6 y 9: valida texto y controla el alcance de la variable
+    // Requerimiento 6 y 9
     static bool ValidarTexto(string texto)
     {
         return !string.IsNullOrWhiteSpace(texto);
     }
 
-    // // Requerimiento 7 y 8: mostrar resumen usando parametros
+    // Requerimiento 7 y 8
     static void MostrarResumen(
         string codigo,
         string nombre,
