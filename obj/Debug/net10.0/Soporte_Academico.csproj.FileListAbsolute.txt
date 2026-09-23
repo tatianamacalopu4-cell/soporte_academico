@@ -1,0 +1,14 @@
+C:\laboratorio02\Soporte_Academico\bin\Debug\net10.0\Soporte_Academico.exe
+C:\laboratorio02\Soporte_Academico\bin\Debug\net10.0\Soporte_Academico.deps.json
+C:\laboratorio02\Soporte_Academico\bin\Debug\net10.0\Soporte_Academico.runtimeconfig.json
+C:\laboratorio02\Soporte_Academico\bin\Debug\net10.0\Soporte_Academico.dll
+C:\laboratorio02\Soporte_Academico\bin\Debug\net10.0\Soporte_Academico.pdb
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.GeneratedMSBuildEditorConfig.editorconfig
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.AssemblyInfoInputs.cache
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.AssemblyInfo.cs
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.csproj.CoreCompileInputs.cache
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.dll
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\refint\Soporte_Academico.dll
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.pdb
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\Soporte_Academico.genruntimeconfig.cache
+C:\laboratorio02\Soporte_Academico\obj\Debug\net10.0\ref\Soporte_Academico.dll
