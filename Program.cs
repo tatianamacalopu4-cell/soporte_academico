@@ -84,14 +84,8 @@ class Program
         // Requerimiento 5: calcular prioridad
         string prioridad = CalcularPrioridad(tipoConsulta);
 
-        // Mostrar solicitud
-        Console.WriteLine();
-        Console.WriteLine("Solicitud registrada.");
-        Console.WriteLine($"Código: {codigo}");
-        Console.WriteLine($"Nombre: {nombre}");
-        Console.WriteLine($"Consulta: {tipoConsulta}");
-        Console.WriteLine($"Descripción: {descripcion}");
-        Console.WriteLine($"Prioridad: {prioridad}");
+        // Requerimiento 7: mostrar resumen
+        MostrarResumen(codigo, nombre, tipoConsulta, descripcion, prioridad);
     }
 
     // Requerimiento 2
@@ -135,5 +129,25 @@ class Program
     static bool ValidarTexto(string texto)
     {
         return !string.IsNullOrWhiteSpace(texto);
+    }
+
+    // Requerimiento 7
+    static void MostrarResumen(
+        string codigo,
+        string nombre,
+        string tipoConsulta,
+        string descripcion,
+        string prioridad)
+    {
+        Console.WriteLine();
+        Console.WriteLine("========================================");
+        Console.WriteLine("       RESUMEN DE LA SOLICITUD");
+        Console.WriteLine("========================================");
+        Console.WriteLine($"Código: {codigo}");
+        Console.WriteLine($"Nombre: {nombre}");
+        Console.WriteLine($"Consulta: {tipoConsulta}");
+        Console.WriteLine($"Descripción: {descripcion}");
+        Console.WriteLine($"Prioridad: {prioridad}");
+        Console.WriteLine("========================================");
     }
 }
