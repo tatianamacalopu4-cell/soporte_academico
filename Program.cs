@@ -63,12 +63,16 @@ class Program
         Console.Write("Descripción de la solicitud: ");
         string descripcion = Console.ReadLine()!;
 
+        // Requerimiento 5: calcular prioridad
+        string prioridad = CalcularPrioridad(tipoConsulta);
+
         Console.WriteLine();
         Console.WriteLine("Solicitud registrada.");
         Console.WriteLine($"Código: {codigo}");
         Console.WriteLine($"Nombre: {nombre}");
         Console.WriteLine($"Consulta: {tipoConsulta}");
         Console.WriteLine($"Descripción: {descripcion}");
+        Console.WriteLine($"Prioridad: {prioridad}");
     }
 
     // Requerimiento 2
@@ -87,5 +91,24 @@ class Program
                tipoConsulta == "constancia" ||
                tipoConsulta == "plataforma" ||
                tipoConsulta == "otro";
+    }
+
+    // Requerimiento 5: función con retorno para calcular prioridad
+    static string CalcularPrioridad(string tipoConsulta)
+    {
+        tipoConsulta = tipoConsulta.ToLower();
+
+        if (tipoConsulta == "matricula" || tipoConsulta == "pagos")
+        {
+            return "Alta";
+        }
+        else if (tipoConsulta == "constancia" || tipoConsulta == "plataforma")
+        {
+            return "Media";
+        }
+        else
+        {
+            return "Baja";
+        }
     }
 }
