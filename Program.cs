@@ -125,7 +125,7 @@ class Program
         }
     }
 
-    // Requerimiento 6
+    // // Requerimiento 6 y 9: valida texto y controla el alcance de la variable
     static bool ValidarTexto(string texto)
     {
         return !string.IsNullOrWhiteSpace(texto);
