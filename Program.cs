@@ -131,7 +131,7 @@ class Program
         return !string.IsNullOrWhiteSpace(texto);
     }
 
-    // Requerimiento 7
+    // // Requerimiento 7 y 8: mostrar resumen usando parametros
     static void MostrarResumen(
         string codigo,
         string nombre,
